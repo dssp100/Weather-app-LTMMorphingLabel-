@@ -10,9 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var forecastLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let manager = AFHTTPSessionManager()
+        
+        manager.get("http://api.openweathermap.org/data/2.5/forecast/daily?q=London&mode=json&units=metric&cnt=1&appid=450cd998ac2e3419b024a8237eea8b54",
+                    parameters: nil,
+                    progress: nil,
+                    success: { (operation: URLSessionDataTask, responseObject:Any?) in
+                        if let responseObject = responseObject {
+                            print("Response: " + (responseObject as AnyObject).description)
+                        }
+        }) { (operation:URLSessionDataTask?, error:Error) in
+            print("Error: " + error.localizedDescription)
+        }
     }
 
     override func didReceiveMemoryWarning() {
