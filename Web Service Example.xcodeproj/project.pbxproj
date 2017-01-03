@@ -41,7 +41,7 @@
 		8E0103E71E1A626D0083148D /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		8E0103E81E1A626D0083148D /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		8E0103E91E1A626D0083148D /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		8E0103F01E1A66C10083148D /* bridge h.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "bridge h.h"; sourceTree = "<group>"; };
+		8E0103F01E1A66C10083148D /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 		8E0103BE1E1A539B0083148D = {
 			isa = PBXGroup;
 			children = (
-				8E0103F01E1A66C10083148D /* bridge h.h */,
+				8E0103F01E1A66C10083148D /* bridge.h */,
 				8E0103C91E1A539B0083148D /* Web Service Example */,
 				8E0103C81E1A539B0083148D /* Products */,
 				8E0103DC1E1A626D0083148D /* AFNetworking */,
