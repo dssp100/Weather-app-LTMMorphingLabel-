@@ -9,8 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var locationLabel: UILabel!
+    
+    @IBOutlet weak var locationLabel: LTMorphingLabel!
     @IBOutlet weak var forecastLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var backgroundColor: UIView!
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
                         let json = JSON(responseObject!)
                         
                         if let location = json["city"]["name"].string {
-                            self.locationLabel.text = location
+                            self.locationLabel.text.Fall = location
                         }
                         
                         if let forecast = json["list"][0]["weather"][0]["description"].string {
@@ -55,36 +55,21 @@ class ViewController: UIViewController {
                             case 20.0..<24.0:
                                 self.backgroundColor.backgroundColor = UIColor.red
                             default:
-                                self.backgroundColor.backgroundColor = UIColor.clear
+                                self.backgroundColor.backgroundColor = UIColor.white
                             }
-                print(json)
+                            print(json)
                         }
-//                        if let responseObject = responseObject {
-//                            print("Response: " + (responseObject as AnyObject).description)
-//                            if let listOfDays = (responseObject as AnyObject)["list"] as? [AnyObject] {
-//                                if let tomorrow = listOfDays[0] as? [String:AnyObject] {
-//                                    if let tomorrowsWeather = tomorrow["weather"] as? [AnyObject] {
-//                                        if let firstWeatherOfDay = tomorrowsWeather[0] as? [String:AnyObject] {
-//                                            if let forecast = firstWeatherOfDay["description"] as? String {
-//                                                self.forecastLabel.text = forecast
-//                                                
-//                                            }
-//                                        }
-//                                    }
-//                                }
-//                            }
-//                        }
         }) { (operation:URLSessionDataTask?, error:Error) in
             print("Error: " + error.localizedDescription)
         }
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
