@@ -21,22 +21,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsu-Sj-NcJ">
-                                <rect key="frame" x="0.0" y="229.5" width="320" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0VP-uc-sn9">
+                                <rect key="frame" x="0.0" y="61" width="320" height="69"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mi-t7-PMx" userLabel="Forecast Label">
+                                <rect key="frame" x="0.0" y="129" width="320" height="69"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsu-Sj-NcJ" userLabel="Temp Label">
+                                <rect key="frame" x="0.0" y="206" width="320" height="69"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="0VP-uc-sn9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="41" id="9Ky-8P-93c"/>
                             <constraint firstItem="Lsu-Sj-NcJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="M3m-wQ-uOB"/>
+                            <constraint firstItem="0VP-uc-sn9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NEl-uN-djB"/>
+                            <constraint firstItem="Lsu-Sj-NcJ" firstAttribute="top" secondItem="9mi-t7-PMx" secondAttribute="bottom" constant="8" symbolic="YES" id="htz-tR-wGp"/>
+                            <constraint firstItem="9mi-t7-PMx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mcf-nF-5SY"/>
                             <constraint firstAttribute="trailing" secondItem="Lsu-Sj-NcJ" secondAttribute="trailing" id="qGY-4D-L0g"/>
                             <constraint firstItem="Lsu-Sj-NcJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qb5-Kb-7I8"/>
+                            <constraint firstItem="9mi-t7-PMx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tdg-Hc-MGq"/>
+                            <constraint firstAttribute="trailing" secondItem="9mi-t7-PMx" secondAttribute="trailing" id="uug-IO-JZy"/>
+                            <constraint firstAttribute="trailing" secondItem="0VP-uc-sn9" secondAttribute="trailing" id="vWW-Yh-JCm"/>
+                            <constraint firstItem="0VP-uc-sn9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zSZ-4Q-j2z"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="forecastLabel" destination="Lsu-Sj-NcJ" id="eJf-V3-EHB"/>
+                        <outlet property="backgroundColor" destination="8bC-Xf-vdC" id="7s2-hn-4p6"/>
+                        <outlet property="forecastLabel" destination="9mi-t7-PMx" id="JBG-6C-QXl"/>
+                        <outlet property="locationLabel" destination="0VP-uc-sn9" id="7vQ-O0-CiV"/>
+                        <outlet property="tempLabel" destination="Lsu-Sj-NcJ" id="ORf-Qn-lIN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
